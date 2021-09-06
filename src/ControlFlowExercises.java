@@ -59,11 +59,21 @@ public class ControlFlowExercises {
         System.out.println("------ | ------- | -----");
         System.out.println(number + "      | " + (number * number) + "      | " + (number * number * number));
 
-        System.out.println("Give me a grade between 0 - 100: ");
+        System.out.println("Please enter a grade between 0 - 100: ");
         int grade = sc.nextInt();
-        sc.nextLine();
 
-        System.out.println("Here is your grade: ");
+        if (grade >= 88) {
+            System.out.println("You got an A");
+        } else if (grade >= 80) {
+            System.out.println("You got a B");
+        } else if (grade >= 67) {
+            System.out.println("You got a C");
+        } else if (grade >= 60) {
+            System.out.println("You got a D");
+        } else {
+            System.out.println("You got an F");
+        }
+
     }
 
 }
