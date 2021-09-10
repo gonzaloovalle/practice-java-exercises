@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
     public static void main(String[] args) {
 //        System.out.println(Addition(5,5));
@@ -7,6 +9,8 @@ public class MethodsExercises {
 //        System.out.println(Modulus(5,5));
 
         count(5);
+
+
     }
 
     public static int Addition(int x, int y) {
@@ -37,5 +41,20 @@ public class MethodsExercises {
         }
         System.out.println(n);
         count(n - 1);
+    }
+
+    public static int getInteger(int min, int max) {
+        Scanner sc = new Scanner(System.in);
+        if (!sc.hasNextInt()) {
+            System.out.println("Not a number!");
+            return getInteger(min, max);
+        }
+        int userInput = sc.nextInt();
+        if (userInput >= min && userInput <= max) {
+            return userInput;
+        } else {
+            System.out.println("Number not in range!");
+            return getInteger(min, max);
+        }
     }
 }
